@@ -1,0 +1,695 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13B4AFDB24C6D14E00A38D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B4AFDA24C6D14E00A38D35 /* AppDelegate.swift */; };
+		13B4AFDD24C6D14E00A38D35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B4AFDC24C6D14E00A38D35 /* ViewController.swift */; };
+		13B4AFDF24C6D15200A38D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B4AFDE24C6D15200A38D35 /* Assets.xcassets */; };
+		13B4AFE224C6D15200A38D35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B4AFE024C6D15200A38D35 /* Main.storyboard */; };
+		13B4AFEE24C6D15200A38D35 /* SoundCloonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B4AFED24C6D15200A38D35 /* SoundCloonTests.swift */; };
+		13B4AFF924C6D15200A38D35 /* SoundCloonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B4AFF824C6D15200A38D35 /* SoundCloonUITests.swift */; };
+		8F3001C8E9456F42ED6BFC02 /* Pods_SoundCloonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446E6A24676745193891173E /* Pods_SoundCloonTests.framework */; };
+		A4438FAE08E89D6EEE687894 /* Pods_SoundCloon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A169EBF055D90D1A9C9CB8EA /* Pods_SoundCloon.framework */; };
+		FC156679D47E67ABDB4824FA /* Pods_SoundCloon_SoundCloonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638DA8B0E2BFDADFD2134DFD /* Pods_SoundCloon_SoundCloonUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13B4AFEA24C6D15200A38D35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13B4AFCF24C6D14E00A38D35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B4AFD624C6D14E00A38D35;
+			remoteInfo = SoundCloon;
+		};
+		13B4AFF524C6D15200A38D35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13B4AFCF24C6D14E00A38D35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B4AFD624C6D14E00A38D35;
+			remoteInfo = SoundCloon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13B4AFD724C6D14E00A38D35 /* SoundCloon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundCloon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B4AFDA24C6D14E00A38D35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		13B4AFDC24C6D14E00A38D35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13B4AFDE24C6D15200A38D35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13B4AFE124C6D15200A38D35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		13B4AFE324C6D15200A38D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13B4AFE424C6D15200A38D35 /* SoundCloon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoundCloon.entitlements; sourceTree = "<group>"; };
+		13B4AFE924C6D15200A38D35 /* SoundCloonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B4AFED24C6D15200A38D35 /* SoundCloonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloonTests.swift; sourceTree = "<group>"; };
+		13B4AFEF24C6D15200A38D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13B4AFF424C6D15200A38D35 /* SoundCloonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B4AFF824C6D15200A38D35 /* SoundCloonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloonUITests.swift; sourceTree = "<group>"; };
+		13B4AFFA24C6D15200A38D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21FCB0B39168AAB399558F3F /* Pods-SoundCloon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloon.release.xcconfig"; path = "Target Support Files/Pods-SoundCloon/Pods-SoundCloon.release.xcconfig"; sourceTree = "<group>"; };
+		3C1F40706F7FB02B0ED8B662 /* Pods-SoundCloonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloonTests.release.xcconfig"; path = "Target Support Files/Pods-SoundCloonTests/Pods-SoundCloonTests.release.xcconfig"; sourceTree = "<group>"; };
+		40EC3B2586FEEC7792CE2FF3 /* Pods-SoundCloon-SoundCloonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloon-SoundCloonUITests.debug.xcconfig"; path = "Target Support Files/Pods-SoundCloon-SoundCloonUITests/Pods-SoundCloon-SoundCloonUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		446E6A24676745193891173E /* Pods_SoundCloonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundCloonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C3EDFFB742BB7EDB4D1ED4A /* Pods-SoundCloon-SoundCloonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloon-SoundCloonUITests.release.xcconfig"; path = "Target Support Files/Pods-SoundCloon-SoundCloonUITests/Pods-SoundCloon-SoundCloonUITests.release.xcconfig"; sourceTree = "<group>"; };
+		638DA8B0E2BFDADFD2134DFD /* Pods_SoundCloon_SoundCloonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundCloon_SoundCloonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D45F77CE65762648A8998A6 /* Pods-SoundCloonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloonTests.debug.xcconfig"; path = "Target Support Files/Pods-SoundCloonTests/Pods-SoundCloonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A169EBF055D90D1A9C9CB8EA /* Pods_SoundCloon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundCloon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C81E782A3949053703420FC8 /* Pods-SoundCloon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloon.debug.xcconfig"; path = "Target Support Files/Pods-SoundCloon/Pods-SoundCloon.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13B4AFD424C6D14E00A38D35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4438FAE08E89D6EEE687894 /* Pods_SoundCloon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B4AFE624C6D15200A38D35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F3001C8E9456F42ED6BFC02 /* Pods_SoundCloonTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B4AFF124C6D15200A38D35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC156679D47E67ABDB4824FA /* Pods_SoundCloon_SoundCloonUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0981B2820F8A834C76416602 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A169EBF055D90D1A9C9CB8EA /* Pods_SoundCloon.framework */,
+				638DA8B0E2BFDADFD2134DFD /* Pods_SoundCloon_SoundCloonUITests.framework */,
+				446E6A24676745193891173E /* Pods_SoundCloonTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13B4AFCE24C6D14E00A38D35 = {
+			isa = PBXGroup;
+			children = (
+				13B4AFD924C6D14E00A38D35 /* SoundCloon */,
+				13B4AFEC24C6D15200A38D35 /* SoundCloonTests */,
+				13B4AFF724C6D15200A38D35 /* SoundCloonUITests */,
+				13B4AFD824C6D14E00A38D35 /* Products */,
+				727669D6D949B5872B77BCF7 /* Pods */,
+				0981B2820F8A834C76416602 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		13B4AFD824C6D14E00A38D35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B4AFD724C6D14E00A38D35 /* SoundCloon.app */,
+				13B4AFE924C6D15200A38D35 /* SoundCloonTests.xctest */,
+				13B4AFF424C6D15200A38D35 /* SoundCloonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13B4AFD924C6D14E00A38D35 /* SoundCloon */ = {
+			isa = PBXGroup;
+			children = (
+				13B4AFDA24C6D14E00A38D35 /* AppDelegate.swift */,
+				13B4AFDC24C6D14E00A38D35 /* ViewController.swift */,
+				13B4AFDE24C6D15200A38D35 /* Assets.xcassets */,
+				13B4AFE024C6D15200A38D35 /* Main.storyboard */,
+				13B4AFE324C6D15200A38D35 /* Info.plist */,
+				13B4AFE424C6D15200A38D35 /* SoundCloon.entitlements */,
+			);
+			path = SoundCloon;
+			sourceTree = "<group>";
+		};
+		13B4AFEC24C6D15200A38D35 /* SoundCloonTests */ = {
+			isa = PBXGroup;
+			children = (
+				13B4AFED24C6D15200A38D35 /* SoundCloonTests.swift */,
+				13B4AFEF24C6D15200A38D35 /* Info.plist */,
+			);
+			path = SoundCloonTests;
+			sourceTree = "<group>";
+		};
+		13B4AFF724C6D15200A38D35 /* SoundCloonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				13B4AFF824C6D15200A38D35 /* SoundCloonUITests.swift */,
+				13B4AFFA24C6D15200A38D35 /* Info.plist */,
+			);
+			path = SoundCloonUITests;
+			sourceTree = "<group>";
+		};
+		727669D6D949B5872B77BCF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C81E782A3949053703420FC8 /* Pods-SoundCloon.debug.xcconfig */,
+				21FCB0B39168AAB399558F3F /* Pods-SoundCloon.release.xcconfig */,
+				40EC3B2586FEEC7792CE2FF3 /* Pods-SoundCloon-SoundCloonUITests.debug.xcconfig */,
+				5C3EDFFB742BB7EDB4D1ED4A /* Pods-SoundCloon-SoundCloonUITests.release.xcconfig */,
+				9D45F77CE65762648A8998A6 /* Pods-SoundCloonTests.debug.xcconfig */,
+				3C1F40706F7FB02B0ED8B662 /* Pods-SoundCloonTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13B4AFD624C6D14E00A38D35 /* SoundCloon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B4AFFD24C6D15200A38D35 /* Build configuration list for PBXNativeTarget "SoundCloon" */;
+			buildPhases = (
+				6F291C0C7A10EB84D860F2E3 /* [CP] Check Pods Manifest.lock */,
+				13B4AFD324C6D14E00A38D35 /* Sources */,
+				13B4AFD424C6D14E00A38D35 /* Frameworks */,
+				13B4AFD524C6D14E00A38D35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundCloon;
+			productName = SoundCloon;
+			productReference = 13B4AFD724C6D14E00A38D35 /* SoundCloon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		13B4AFE824C6D15200A38D35 /* SoundCloonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B4B00024C6D15200A38D35 /* Build configuration list for PBXNativeTarget "SoundCloonTests" */;
+			buildPhases = (
+				A05F5B9A7A47BE365207B532 /* [CP] Check Pods Manifest.lock */,
+				13B4AFE524C6D15200A38D35 /* Sources */,
+				13B4AFE624C6D15200A38D35 /* Frameworks */,
+				13B4AFE724C6D15200A38D35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13B4AFEB24C6D15200A38D35 /* PBXTargetDependency */,
+			);
+			name = SoundCloonTests;
+			productName = SoundCloonTests;
+			productReference = 13B4AFE924C6D15200A38D35 /* SoundCloonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B4AFF324C6D15200A38D35 /* SoundCloonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B4B00324C6D15200A38D35 /* Build configuration list for PBXNativeTarget "SoundCloonUITests" */;
+			buildPhases = (
+				B8440793C4244134C8D5B12D /* [CP] Check Pods Manifest.lock */,
+				13B4AFF024C6D15200A38D35 /* Sources */,
+				13B4AFF124C6D15200A38D35 /* Frameworks */,
+				13B4AFF224C6D15200A38D35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13B4AFF624C6D15200A38D35 /* PBXTargetDependency */,
+			);
+			name = SoundCloonUITests;
+			productName = SoundCloonUITests;
+			productReference = 13B4AFF424C6D15200A38D35 /* SoundCloonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13B4AFCF24C6D14E00A38D35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Naman Kalkhuria";
+				TargetAttributes = {
+					13B4AFD624C6D14E00A38D35 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					13B4AFE824C6D15200A38D35 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 13B4AFD624C6D14E00A38D35;
+					};
+					13B4AFF324C6D15200A38D35 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 13B4AFD624C6D14E00A38D35;
+					};
+				};
+			};
+			buildConfigurationList = 13B4AFD224C6D14E00A38D35 /* Build configuration list for PBXProject "SoundCloon" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 13B4AFCE24C6D14E00A38D35;
+			productRefGroup = 13B4AFD824C6D14E00A38D35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B4AFD624C6D14E00A38D35 /* SoundCloon */,
+				13B4AFE824C6D15200A38D35 /* SoundCloonTests */,
+				13B4AFF324C6D15200A38D35 /* SoundCloonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13B4AFD524C6D14E00A38D35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B4AFDF24C6D15200A38D35 /* Assets.xcassets in Resources */,
+				13B4AFE224C6D15200A38D35 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B4AFE724C6D15200A38D35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B4AFF224C6D15200A38D35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F291C0C7A10EB84D860F2E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoundCloon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A05F5B9A7A47BE365207B532 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoundCloonTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8440793C4244134C8D5B12D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoundCloon-SoundCloonUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13B4AFD324C6D14E00A38D35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B4AFDD24C6D14E00A38D35 /* ViewController.swift in Sources */,
+				13B4AFDB24C6D14E00A38D35 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B4AFE524C6D15200A38D35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B4AFEE24C6D15200A38D35 /* SoundCloonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B4AFF024C6D15200A38D35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B4AFF924C6D15200A38D35 /* SoundCloonUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13B4AFEB24C6D15200A38D35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B4AFD624C6D14E00A38D35 /* SoundCloon */;
+			targetProxy = 13B4AFEA24C6D15200A38D35 /* PBXContainerItemProxy */;
+		};
+		13B4AFF624C6D15200A38D35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B4AFD624C6D14E00A38D35 /* SoundCloon */;
+			targetProxy = 13B4AFF524C6D15200A38D35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13B4AFE024C6D15200A38D35 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13B4AFE124C6D15200A38D35 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13B4AFFB24C6D15200A38D35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13B4AFFC24C6D15200A38D35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		13B4AFFE24C6D15200A38D35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C81E782A3949053703420FC8 /* Pods-SoundCloon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SoundCloon/SoundCloon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SoundCloon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Naman.SoundCloon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		13B4AFFF24C6D15200A38D35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21FCB0B39168AAB399558F3F /* Pods-SoundCloon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SoundCloon/SoundCloon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SoundCloon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Naman.SoundCloon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		13B4B00124C6D15200A38D35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D45F77CE65762648A8998A6 /* Pods-SoundCloonTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SoundCloonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Naman.SoundCloonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundCloon.app/Contents/MacOS/SoundCloon";
+			};
+			name = Debug;
+		};
+		13B4B00224C6D15200A38D35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C1F40706F7FB02B0ED8B662 /* Pods-SoundCloonTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SoundCloonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Naman.SoundCloonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundCloon.app/Contents/MacOS/SoundCloon";
+			};
+			name = Release;
+		};
+		13B4B00424C6D15200A38D35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40EC3B2586FEEC7792CE2FF3 /* Pods-SoundCloon-SoundCloonUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SoundCloonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Naman.SoundCloonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = SoundCloon;
+			};
+			name = Debug;
+		};
+		13B4B00524C6D15200A38D35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C3EDFFB742BB7EDB4D1ED4A /* Pods-SoundCloon-SoundCloonUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SoundCloonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Naman.SoundCloonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = SoundCloon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13B4AFD224C6D14E00A38D35 /* Build configuration list for PBXProject "SoundCloon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B4AFFB24C6D15200A38D35 /* Debug */,
+				13B4AFFC24C6D15200A38D35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B4AFFD24C6D15200A38D35 /* Build configuration list for PBXNativeTarget "SoundCloon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B4AFFE24C6D15200A38D35 /* Debug */,
+				13B4AFFF24C6D15200A38D35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B4B00024C6D15200A38D35 /* Build configuration list for PBXNativeTarget "SoundCloonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B4B00124C6D15200A38D35 /* Debug */,
+				13B4B00224C6D15200A38D35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B4B00324C6D15200A38D35 /* Build configuration list for PBXNativeTarget "SoundCloonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B4B00424C6D15200A38D35 /* Debug */,
+				13B4B00524C6D15200A38D35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13B4AFCF24C6D14E00A38D35 /* Project object */;
+}
