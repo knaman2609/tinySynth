@@ -16,6 +16,8 @@ class ViewController: NSViewController {
     @IBOutlet var Bpmlabel: NSTextField!
     @IBOutlet var oscLabel: NSTextField!
     
+    @IBOutlet var Filter: NSSlider!
+    
     var fmWithADSR:AKMorphingOscillatorBank = AKMorphingOscillatorBank(waveformArray: [AKTable(.sine),
     AKTable(.triangle),
     AKTable(.sawtooth),
@@ -25,6 +27,7 @@ class ViewController: NSViewController {
        
     }
     
+    var filter:AKBandPassButterworthFilter = AKBandPassButterworthFilter();
     var delay:AKDelay = AKDelay();
     var reverb:AKReverb = AKReverb();
     
@@ -46,6 +49,8 @@ class ViewController: NSViewController {
     var timers:Array<Timer> = []
     var BpmValue:Int = 20;
 
+    var syntStatus:String = "STOP";
+    
     @IBAction func OscChanged(_ sender: NSSlider) {
         let square = AKTable(.square, count: 256)
         let triangle = AKTable(.triangle, count: 256)
@@ -138,9 +143,29 @@ class ViewController: NSViewController {
         self.BpmValue = sender.integerValue;
         
         self.Bpmlabel.stringValue = String(self.BpmValue);
-        self.playChordProgression();
+        
+        self.syntStatus = "STOP"
+        self.playChordProgression();        
     }
+
        
+    @IBAction func FilterChanged(_ sender: NSSlider) {
+        var centerFrequency = sender.doubleValue*10.00;
+        
+        self.filter.centerFrequency = centerFrequency;
+        
+        print (centerFrequency)
+    }
+    
+    @IBAction func stopSynth(_ sender: Any) {
+        self.stopPreviousChords();
+        
+        for timer in self.timers {
+            timer.invalidate();
+        }
+        
+        self.syntStatus = "STOP";
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -162,7 +187,13 @@ class ViewController: NSViewController {
         self.reverb = AKReverb(self.delay)
         
         
-        AudioKit.output = self.reverb;
+
+        self.filter = AKBandPassButterworthFilter(self.reverb)
+        filter.centerFrequency = 5_000;
+        filter.bandwidth = 600 // Cents
+        filter.rampDuration = 1.0
+        
+        AudioKit.output = self.filter;
         
         self.delay.time = 0.5;
         self.delay.feedback = 0.5 ;
@@ -181,22 +212,6 @@ class ViewController: NSViewController {
         plot.shouldCenterYAxis = true
             
 
-
-        self.adsrView = AKADSRView { att, dec, sus, rel in
-            self.fmWithADSR.attackDuration = att
-            self.fmWithADSR.decayDuration = dec
-            self.fmWithADSR.sustainLevel = sus
-            self.fmWithADSR.releaseDuration = rel
-
-            print("AKADSRView", att);
-        }
-
-        self.adsrView.attackDuration = fmWithADSR.attackDuration
-        self.adsrView.decayDuration = fmWithADSR.decayDuration
-        self.adsrView.releaseDuration = fmWithADSR.releaseDuration
-        self.adsrView.sustainLevel = fmWithADSR.sustainLevel
-        
-        self.ADSRGraphView.addArrangedSubview(self.adsrView)
         self.WaveView.addArrangedSubview(self.plot);
         
        
@@ -268,11 +283,17 @@ class ViewController: NSViewController {
     func playChordProgression() {
         var index:Int = 0;
         
+        if (self.syntStatus == "STOP") {
+            self.syntStatus = "START"
+        } else {
+            return;
+        }
+        
         for timer in self.timers {
             timer.invalidate();
         }
         
-
+        
         var timerID =
             Timer.scheduledTimer(withTimeInterval: TimeInterval(Float(60.0/self.BpmValue)), repeats: true) { timer in
                 

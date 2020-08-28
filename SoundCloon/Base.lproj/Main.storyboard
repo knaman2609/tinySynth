@@ -422,10 +422,38 @@
                                 <rect key="frame" x="160" y="0.0" width="280" height="340"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S3l-da-2jz" userLabel="WaveView">
-                                        <rect key="frame" x="10" y="174" width="260" height="156"/>
+                                        <rect key="frame" x="10" y="34" width="260" height="296"/>
                                     </stackView>
-                                    <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4d-5q-FjM" userLabel="ADSRGraphView">
-                                        <rect key="frame" x="10" y="10" width="260" height="156"/>
+                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4d-5q-FjM" userLabel="FilterView">
+                                        <rect key="frame" x="100" y="10" width="170" height="16"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2E6-GI-uMy">
+                                                <rect key="frame" x="-2" y="0.0" width="35" height="16"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Filter" id="9Fj-mJ-AYP">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <slider verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3L3-gp-TOq">
+                                                <rect key="frame" x="37" y="-1" width="96" height="19"/>
+                                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="rCs-kB-uM7"/>
+                                                <connections>
+                                                    <action selector="FilterChanged:" target="XfG-lQ-9wD" id="Ncx-bn-7xh"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="3L3-gp-TOq" firstAttribute="centerX" secondItem="b4d-5q-FjM" secondAttribute="centerX" id="4hS-Nf-EH3"/>
+                                        </constraints>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
                                     </stackView>
                                 </subviews>
                                 <edgeInsets key="edgeInsets" left="10" right="10" top="10" bottom="10"/>
@@ -448,20 +476,30 @@
                                 <rect key="frame" x="440" y="0.0" width="160" height="340"/>
                                 <subviews>
                                     <slider horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mlh-fc-hnz">
-                                        <rect key="frame" x="66" y="171" width="28" height="172"/>
+                                        <rect key="frame" x="66" y="229" width="28" height="114"/>
                                         <sliderCell key="cell" alignment="left" minValue="20" maxValue="180" doubleValue="20" allowsTickMarkValuesOnly="YES" sliderType="circular" id="3Wt-4P-wkb"/>
                                         <connections>
                                             <action selector="BpmSelected:" target="XfG-lQ-9wD" id="TAF-vg-WYP"/>
                                         </connections>
                                     </slider>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P0F-LE-bjd">
-                                        <rect key="frame" x="62" y="0.0" width="37" height="166"/>
+                                        <rect key="frame" x="62" y="116" width="37" height="108"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="ORa-lu-koO">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Za-X4-HZg">
+                                        <rect key="frame" x="46" y="-7" width="69" height="119"/>
+                                        <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="O5M-ei-bPR">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <connections>
+                                                <action selector="stopSynth:" target="XfG-lQ-9wD" id="D2y-ET-HG8"/>
+                                            </connections>
+                                        </buttonCell>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="iCH-pO-E9X"/>
@@ -470,8 +508,10 @@
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
