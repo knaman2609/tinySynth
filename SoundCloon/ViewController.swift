@@ -11,6 +11,11 @@ import AudioKit
 import AudioKitUI
 
 class ViewController: NSViewController {
+    let oscBank = AKOscillatorBank()//1
+    let sequencer = AKAppleSequencer()//2
+    let midi = AKMIDI()//3
+    let sequenceLength = AKDuration(beats: 8.0)
+    
     @IBOutlet var WaveView: NSStackView!
     @IBOutlet var ADSRGraphView: NSStackView!
     @IBOutlet var Bpmlabel: NSTextField!
@@ -18,13 +23,14 @@ class ViewController: NSViewController {
     
     @IBOutlet var Filter: NSSlider!
     
-    var fmWithADSR:AKMorphingOscillatorBank = AKMorphingOscillatorBank(waveformArray: [AKTable(.sine),
-    AKTable(.triangle),
-    AKTable(.sawtooth),
-    AKTable(.square)]);
+    var fmWithADSR:AKMorphingOscillatorBank = AKMorphingOscillatorBank(waveformArray: [
+        AKTable(.sawtooth),
+        AKTable(.triangle),
+        AKTable(.sine),
+        AKTable(.square)]);
     
     var adsrView:AKADSRView = AKADSRView { att, dec, sus, rel in
-       
+        
     }
     
     var filter:AKBandPassButterworthFilter = AKBandPassButterworthFilter();
@@ -48,15 +54,17 @@ class ViewController: NSViewController {
     
     var timers:Array<Timer> = []
     var BpmValue:Int = 20;
-
+    
     var syntStatus:String = "STOP";
+    //    var sequencer:AKAppleSequencer = AKAppleSequencer()
+    //    var sequenceLength:AKDuration = AKDuration(beats: 8.0)
     
     @IBAction func OscChanged(_ sender: NSSlider) {
         let square = AKTable(.square, count: 256)
         let triangle = AKTable(.triangle, count: 256)
         let sine = AKTable(.sine, count: 256)
         let sawtooth = AKTable(.sawtooth, count: 256)
-
+        
         var waveform:AKTable;
         var waveformName:String;
         var index:Double;
@@ -115,7 +123,7 @@ class ViewController: NSViewController {
         self.plot.resume()
         self.playChordProgression()
     }
-       
+    
     @IBAction func CSelected(_ sender: NSButton) {
         self.scaleSelected = "C";
         self.plot.resume();
@@ -130,7 +138,7 @@ class ViewController: NSViewController {
         self.scaleSelected = "Em";
     }
     
-
+    
     @IBAction func GmSelected(_ sender: NSButton) {
         self.scaleSelected = "Gm";
     }
@@ -147,8 +155,8 @@ class ViewController: NSViewController {
         self.syntStatus = "STOP"
         self.playChordProgression();        
     }
-
-       
+    
+    
     @IBAction func FilterChanged(_ sender: NSSlider) {
         var centerFrequency = sender.doubleValue*10.00;
         
@@ -172,61 +180,96 @@ class ViewController: NSViewController {
         
     }
     
+    func setupSynth() {
+        oscBank.attackDuration = 0.1
+        oscBank.decayDuration = 0.1
+        oscBank.sustainLevel = 0.1
+        oscBank.releaseDuration = 0.3
+    }
+    
+    func doSomeStuff (){
+        let midiNode = AKMIDINode(node: self.fmWithADSR)//1
+        let track = sequencer.newTrack()//2
+        sequencer.setLength(sequenceLength)//3
+        generateSequence() //4
+        AudioKit.output = midiNode
+        
+        do {
+            try? AudioKit.start()//6
+        } catch{
+            
+        }
+        
+        track?.setMIDIOutput(midiNode.midiIn);
+        sequencer.setTempo(120.0)//8
+        sequencer.enableLooping()//9
+        sequencer.play()//10
+    }
+    
+    func generateSequence() {
+        let stepSize: Float = 1/8 //1
+        sequencer.tracks[0].clear() //2
+        let numberOfSteps = Int(Float(sequenceLength.beats)/stepSize)//3
+        print("NUMBER OF STEPS********** \(numberOfSteps)")
+        for i in 0 ..< numberOfSteps { //4
+            if i%4 == 0 {
+                sequencer.tracks[0].add(noteNumber: 69, velocity: 127, position: AKDuration(beats: Double(i)), duration: AKDuration(beats: 0.5))
+            } else {
+                sequencer.tracks[0].add(noteNumber: 57, velocity: 127, position: AKDuration(beats: Double(i)), duration: AKDuration(beats: 0.5))
+            }
+        }
+    }
+    
     
     override func viewWillAppear() {
         super.viewWillAppear()
-     
+        
         view.window?.styleMask.remove(.resizable)
         view.window?.styleMask.remove(.miniaturizable)
         view.window?.center()
-                
+        
         let amplitudeTracker = AKAmplitudeTracker(fmWithADSR)
         let booster = AKBooster(amplitudeTracker, gain: 5)
-        
+
         self.delay = AKDelay(booster)
         self.reverb = AKReverb(self.delay)
-        
-        
+
+
 
         self.filter = AKBandPassButterworthFilter(self.reverb)
-        filter.centerFrequency = 5_000;
+        filter.centerFrequency = 5_00;
         filter.bandwidth = 600 // Cents
         filter.rampDuration = 1.0
-        
-        AudioKit.output = self.filter;
-        
+
+//        AudioKit.output = self.filter;
+
         self.delay.time = 0.5;
         self.delay.feedback = 0.5 ;
         self.delay.dryWetMix = 0.5 ;
-        
+
         self.reverb.loadFactoryPreset(.cathedral)
         self.reverb.dryWetMix = 0.5
-        
-        
-        
+
+
+
         let frame = CGRect(x: 0.0, y: 0.0, width: 440, height: 330)
         self.plot = AKOutputWaveformPlot(frame: frame)
 
         plot.plotType = .rolling
         plot.backgroundColor = AKColor.clear
         plot.shouldCenterYAxis = true
-            
+
 
         self.WaveView.addArrangedSubview(self.plot);
         
-       
-        
-        do {
-            try AudioKit.start()
-            amplitudeTracker.start()
-        } catch {
-            
-        }
         
         
-        plot.resume()
         
-        self.Bpmlabel.stringValue = String(self.BpmValue);
+        
+        self.doSomeStuff();
+        
+        //        self.Bpmlabel.stringValue = String(self.BpmValue);
+        //        plot.resume()
     }
     
     func createView(view: NSStackView, color: CGColor) {
@@ -235,7 +278,7 @@ class ViewController: NSViewController {
         myView.layer?.backgroundColor = color;
         
         
-       view.addArrangedSubview(myView);
+        view.addArrangedSubview(myView);
         
         let constraints = [
             myView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -243,9 +286,9 @@ class ViewController: NSViewController {
             view.bottomAnchor.constraint(equalTo: myView.bottomAnchor),
             view.rightAnchor.constraint(equalTo: myView.rightAnchor, constant: 0)
         ]
-
+        
         NSLayoutConstraint.activate(constraints)
-            
+        
     }
     
     func stopPreviousChords() {
@@ -258,14 +301,14 @@ class ViewController: NSViewController {
         self.stopPreviousChords();
         self.currChordName = chord;
         self.currChordNotes = self.chordNotes[chord]!;
-    
+        
         
         for note in self.currChordNotes {
-            self.fmWithADSR.play(noteNumber: MIDINoteNumber(note), velocity: 40)
+            self.fmWithADSR.play(noteNumber: MIDINoteNumber(note), velocity: 20)
         }
-       
-//        print("playing");
-//        print(chord);
+        
+        //        print("playing");
+        //        print(chord);
     }
     
     
@@ -277,7 +320,7 @@ class ViewController: NSViewController {
         } else {
             self.playChord(chord: chordProgression[0])
         }
-      
+        
     }
     
     func playChordProgression() {
@@ -298,10 +341,10 @@ class ViewController: NSViewController {
             Timer.scheduledTimer(withTimeInterval: TimeInterval(Float(60.0/self.BpmValue)), repeats: true) { timer in
                 
                 
-                    self.inverseChords();
+                self.inverseChords();
                 
                 index  = index + 1;
-            }
+        }
         
         self.timers.append(timerID);
     }
@@ -309,10 +352,9 @@ class ViewController: NSViewController {
     
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
-    
     
 }
 
