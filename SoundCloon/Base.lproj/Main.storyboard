@@ -483,8 +483,8 @@
                                         </connections>
                                     </slider>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P0F-LE-bjd">
-                                        <rect key="frame" x="62" y="116" width="37" height="108"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="ORa-lu-koO">
+                                        <rect key="frame" x="70" y="116" width="20" height="108"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="20" id="ORa-lu-koO">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -535,7 +535,7 @@
                     </view>
                     <connections>
                         <outlet property="ADSRGraphView" destination="b4d-5q-FjM" id="2t2-pa-7Yr"/>
-                        <outlet property="Bpmlabel" destination="P0F-LE-bjd" id="tPT-0f-KEW"/>
+                        <outlet property="BpmLabel" destination="P0F-LE-bjd" id="l7v-fj-IVE"/>
                         <outlet property="WaveView" destination="S3l-da-2jz" id="iI5-jT-fIa"/>
                         <outlet property="oscLabel" destination="GoD-vm-RvU" id="Aan-Hv-Bh7"/>
                     </connections>
