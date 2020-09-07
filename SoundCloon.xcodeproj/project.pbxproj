@@ -13,6 +13,12 @@
 		13B4AFE224C6D15200A38D35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B4AFE024C6D15200A38D35 /* Main.storyboard */; };
 		13B4AFEE24C6D15200A38D35 /* SoundCloonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B4AFED24C6D15200A38D35 /* SoundCloonTests.swift */; };
 		13B4AFF924C6D15200A38D35 /* SoundCloonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B4AFF824C6D15200A38D35 /* SoundCloonUITests.swift */; };
+		741FA0B42506301F00BAD8F1 /* MABSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741FA0B32506301F00BAD8F1 /* MABSlider.swift */; };
+		741FA0BA250632C900BAD8F1 /* leftage.png in Resources */ = {isa = PBXBuildFile; fileRef = 741FA0B5250632C900BAD8F1 /* leftage.png */; };
+		741FA0BB250632C900BAD8F1 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 741FA0B6250632C900BAD8F1 /* knob.png */; };
+		741FA0BC250632C900BAD8F1 /* fill.png in Resources */ = {isa = PBXBuildFile; fileRef = 741FA0B7250632C900BAD8F1 /* fill.png */; };
+		741FA0BD250632C900BAD8F1 /* beforeknob.png in Resources */ = {isa = PBXBuildFile; fileRef = 741FA0B8250632C900BAD8F1 /* beforeknob.png */; };
+		741FA0BE250632C900BAD8F1 /* rightage.png in Resources */ = {isa = PBXBuildFile; fileRef = 741FA0B9250632C900BAD8F1 /* rightage.png */; };
 		8F3001C8E9456F42ED6BFC02 /* Pods_SoundCloonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446E6A24676745193891173E /* Pods_SoundCloonTests.framework */; };
 		A4438FAE08E89D6EEE687894 /* Pods_SoundCloon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A169EBF055D90D1A9C9CB8EA /* Pods_SoundCloon.framework */; };
 		FC156679D47E67ABDB4824FA /* Pods_SoundCloon_SoundCloonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638DA8B0E2BFDADFD2134DFD /* Pods_SoundCloon_SoundCloonUITests.framework */; };
@@ -55,6 +61,12 @@
 		446E6A24676745193891173E /* Pods_SoundCloonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundCloonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C3EDFFB742BB7EDB4D1ED4A /* Pods-SoundCloon-SoundCloonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloon-SoundCloonUITests.release.xcconfig"; path = "Target Support Files/Pods-SoundCloon-SoundCloonUITests/Pods-SoundCloon-SoundCloonUITests.release.xcconfig"; sourceTree = "<group>"; };
 		638DA8B0E2BFDADFD2134DFD /* Pods_SoundCloon_SoundCloonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundCloon_SoundCloonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		741FA0B32506301F00BAD8F1 /* MABSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MABSlider.swift; sourceTree = "<group>"; };
+		741FA0B5250632C900BAD8F1 /* leftage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leftage.png; path = ../../../../Desktop/leftage.png; sourceTree = "<group>"; };
+		741FA0B6250632C900BAD8F1 /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = knob.png; path = ../../../../Desktop/knob.png; sourceTree = "<group>"; };
+		741FA0B7250632C900BAD8F1 /* fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fill.png; path = ../../../../Desktop/fill.png; sourceTree = "<group>"; };
+		741FA0B8250632C900BAD8F1 /* beforeknob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beforeknob.png; path = ../../../../Desktop/beforeknob.png; sourceTree = "<group>"; };
+		741FA0B9250632C900BAD8F1 /* rightage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rightage.png; path = ../../../../Desktop/rightage.png; sourceTree = "<group>"; };
 		9D45F77CE65762648A8998A6 /* Pods-SoundCloonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloonTests.debug.xcconfig"; path = "Target Support Files/Pods-SoundCloonTests/Pods-SoundCloonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A169EBF055D90D1A9C9CB8EA /* Pods_SoundCloon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundCloon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C81E782A3949053703420FC8 /* Pods-SoundCloon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloon.debug.xcconfig"; path = "Target Support Files/Pods-SoundCloon/Pods-SoundCloon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,8 +135,14 @@
 		13B4AFD924C6D14E00A38D35 /* SoundCloon */ = {
 			isa = PBXGroup;
 			children = (
+				741FA0B8250632C900BAD8F1 /* beforeknob.png */,
+				741FA0B7250632C900BAD8F1 /* fill.png */,
+				741FA0B6250632C900BAD8F1 /* knob.png */,
+				741FA0B5250632C900BAD8F1 /* leftage.png */,
+				741FA0B9250632C900BAD8F1 /* rightage.png */,
 				13B4AFDA24C6D14E00A38D35 /* AppDelegate.swift */,
 				13B4AFDC24C6D14E00A38D35 /* ViewController.swift */,
+				741FA0B32506301F00BAD8F1 /* MABSlider.swift */,
 				13B4AFDE24C6D15200A38D35 /* Assets.xcassets */,
 				13B4AFE024C6D15200A38D35 /* Main.storyboard */,
 				13B4AFE324C6D15200A38D35 /* Info.plist */,
@@ -161,7 +179,6 @@
 				9D45F77CE65762648A8998A6 /* Pods-SoundCloonTests.debug.xcconfig */,
 				3C1F40706F7FB02B0ED8B662 /* Pods-SoundCloonTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -273,6 +290,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B4AFDF24C6D15200A38D35 /* Assets.xcassets in Resources */,
+				741FA0BC250632C900BAD8F1 /* fill.png in Resources */,
+				741FA0BE250632C900BAD8F1 /* rightage.png in Resources */,
+				741FA0BB250632C900BAD8F1 /* knob.png in Resources */,
+				741FA0BA250632C900BAD8F1 /* leftage.png in Resources */,
+				741FA0BD250632C900BAD8F1 /* beforeknob.png in Resources */,
 				13B4AFE224C6D15200A38D35 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				741FA0B42506301F00BAD8F1 /* MABSlider.swift in Sources */,
 				13B4AFDD24C6D14E00A38D35 /* ViewController.swift in Sources */,
 				13B4AFDB24C6D14E00A38D35 /* AppDelegate.swift in Sources */,
 			);

@@ -113,9 +113,9 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Bo-OE-fiw" userLabel="AttackSlider">
+                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Bo-OE-fiw" userLabel="AttackSlider" customClass="MABSlider" customModule="SoundCloon" customModuleProvider="target">
                                                 <rect key="frame" x="106" y="14" width="156" height="19"/>
-                                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="NBk-Nr-z4a"/>
+                                                <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="57.03125" tickMarkPosition="above" sliderType="linear" id="NBk-Nr-z4a"/>
                                                 <connections>
                                                     <action selector="AttackChanged:" target="XfG-lQ-9wD" id="dHp-qE-w6A"/>
                                                 </connections>
@@ -536,6 +536,7 @@
                     <connections>
                         <outlet property="ADSRGraphView" destination="b4d-5q-FjM" id="2t2-pa-7Yr"/>
                         <outlet property="BpmLabel" destination="P0F-LE-bjd" id="l7v-fj-IVE"/>
+                        <outlet property="MabSlider" destination="9Bo-OE-fiw" id="lJL-jG-pDk"/>
                         <outlet property="WaveView" destination="S3l-da-2jz" id="iI5-jT-fIa"/>
                         <outlet property="oscLabel" destination="GoD-vm-RvU" id="Aan-Hv-Bh7"/>
                     </connections>

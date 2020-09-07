@@ -10,6 +10,24 @@ import Cocoa
 import AudioKit
 import AudioKitUI
 
+class CustomSliderCell: NSSliderCell {
+
+    let bar: NSImage
+
+    required init(coder aDecoder: NSCoder) {
+        self.bar = NSImage(named: "bar")!
+        super.init(coder: aDecoder)
+    }
+
+    override func drawBar(inside aRect: NSRect, flipped: Bool) {
+        var rect = aRect
+        rect.size = NSSize(width: rect.width, height: 3)
+        self.bar.draw(in: rect)
+        super.drawBar(inside: rect, flipped: flipped)
+    }
+
+}
+
 class ViewController: NSViewController {
     let sequencer = AKAppleSequencer()//2
     let sequenceLength = AKDuration(beats: 8.0)
@@ -19,6 +37,7 @@ class ViewController: NSViewController {
     @IBOutlet var oscLabel: NSTextField!
     @IBOutlet var BpmLabel: NSTextField!
     @IBOutlet var Filter: NSSlider!
+    @IBOutlet var MabSlider: MABSlider!
     
     var fmWithADSR:AKMorphingOscillatorBank = AKMorphingOscillatorBank(waveformArray: [
         AKTable(.sine),
@@ -185,9 +204,9 @@ class ViewController: NSViewController {
     }
     
     func setupSequencer(midiNode: AKMIDINode) {
-        let track = sequencer.newTrack()//2
-        sequencer.setLength(sequenceLength)//3
-        self.generateSequence() //4
+        let track = sequencer.newTrack()
+        sequencer.setLength(sequenceLength)
+//        self.generateSequence() 
         
         
         AudioKit.output = self.filter;
@@ -206,6 +225,7 @@ class ViewController: NSViewController {
     }
     
     func generateSequence() {
+        
           let stepSize: Float = 1/8 //1
           sequencer.tracks[0].clear() //2
           let numberOfSteps = Int(Float(sequenceLength.beats)/stepSize)//3
@@ -222,11 +242,18 @@ class ViewController: NSViewController {
     override func viewWillAppear() {
         super.viewWillAppear()
         
+        self.MabSlider.setKnobImage(image: NSImage(named: "knob")!)
+        self.MabSlider.setBarFillImage(image: NSImage(named: "fill")!)
+        self.MabSlider.setBarFillBeforeKnobImage(image: NSImage(named: "beforeknob")!)
+        self.MabSlider.setBarLeftAgeImage(image: NSImage(named: "leftage")!)
+        self.MabSlider.setBarRightAgeImage(image: NSImage(named: "rightage")!)
+        
         view.window?.styleMask.remove(.resizable)
         view.window?.styleMask.remove(.miniaturizable)
         view.window?.center()
         
-        
+        view.wantsLayer = true
+        view.layer?.backgroundColor = NSColor.hexColor(rgbValue: 0x02394A).cgColor
         var midiNode = self.setupSynth();
         self.setupSequencer(midiNode: midiNode);
     }
@@ -240,3 +267,12 @@ class ViewController: NSViewController {
     
 }
 
+
+public extension NSColor {
+  public class func hexColor(rgbValue: Int, alpha: CGFloat = 1.0) -> NSColor {
+
+    return NSColor(red: ((CGFloat)((rgbValue & 0xFF0000) >> 16))/255.0, green:((CGFloat)((rgbValue & 0xFF00) >> 8))/255.0, blue:((CGFloat)(rgbValue & 0xFF))/255.0, alpha:alpha)
+
+  }
+
+}
