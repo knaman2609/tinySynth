@@ -19,6 +19,8 @@
 		741FA0BC250632C900BAD8F1 /* fill.png in Resources */ = {isa = PBXBuildFile; fileRef = 741FA0B7250632C900BAD8F1 /* fill.png */; };
 		741FA0BD250632C900BAD8F1 /* beforeknob.png in Resources */ = {isa = PBXBuildFile; fileRef = 741FA0B8250632C900BAD8F1 /* beforeknob.png */; };
 		741FA0BE250632C900BAD8F1 /* rightage.png in Resources */ = {isa = PBXBuildFile; fileRef = 741FA0B9250632C900BAD8F1 /* rightage.png */; };
+		74ADC27E2507B84700E86FC2 /* fill1.png in Resources */ = {isa = PBXBuildFile; fileRef = 74ADC27D2507B84700E86FC2 /* fill1.png */; };
+		74ADC2802507B87100E86FC2 /* beforeknob1.png in Resources */ = {isa = PBXBuildFile; fileRef = 74ADC27F2507B87100E86FC2 /* beforeknob1.png */; };
 		8F3001C8E9456F42ED6BFC02 /* Pods_SoundCloonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446E6A24676745193891173E /* Pods_SoundCloonTests.framework */; };
 		A4438FAE08E89D6EEE687894 /* Pods_SoundCloon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A169EBF055D90D1A9C9CB8EA /* Pods_SoundCloon.framework */; };
 		FC156679D47E67ABDB4824FA /* Pods_SoundCloon_SoundCloonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638DA8B0E2BFDADFD2134DFD /* Pods_SoundCloon_SoundCloonUITests.framework */; };
@@ -67,6 +69,8 @@
 		741FA0B7250632C900BAD8F1 /* fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fill.png; path = ../../../../Desktop/fill.png; sourceTree = "<group>"; };
 		741FA0B8250632C900BAD8F1 /* beforeknob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beforeknob.png; path = ../../../../Desktop/beforeknob.png; sourceTree = "<group>"; };
 		741FA0B9250632C900BAD8F1 /* rightage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rightage.png; path = ../../../../Desktop/rightage.png; sourceTree = "<group>"; };
+		74ADC27D2507B84700E86FC2 /* fill1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fill1.png; path = "../../../../../../var/folders/t3/x64sh6c56nn65vqs3vrc5xy00000gn/T/TemporaryItems/(A Document Being Saved By screencaptureui 8)/fill1.png"; sourceTree = "<group>"; };
+		74ADC27F2507B87100E86FC2 /* beforeknob1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beforeknob1.png; path = "../../../../../../var/folders/t3/x64sh6c56nn65vqs3vrc5xy00000gn/T/TemporaryItems/(A Document Being Saved By screencaptureui 9)/beforeknob1.png"; sourceTree = "<group>"; };
 		9D45F77CE65762648A8998A6 /* Pods-SoundCloonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloonTests.debug.xcconfig"; path = "Target Support Files/Pods-SoundCloonTests/Pods-SoundCloonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A169EBF055D90D1A9C9CB8EA /* Pods_SoundCloon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundCloon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C81E782A3949053703420FC8 /* Pods-SoundCloon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloon.debug.xcconfig"; path = "Target Support Files/Pods-SoundCloon/Pods-SoundCloon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 		13B4AFD924C6D14E00A38D35 /* SoundCloon */ = {
 			isa = PBXGroup;
 			children = (
+				74ADC27F2507B87100E86FC2 /* beforeknob1.png */,
+				74ADC27D2507B84700E86FC2 /* fill1.png */,
 				741FA0B8250632C900BAD8F1 /* beforeknob.png */,
 				741FA0B7250632C900BAD8F1 /* fill.png */,
 				741FA0B6250632C900BAD8F1 /* knob.png */,
@@ -292,6 +298,8 @@
 				13B4AFDF24C6D15200A38D35 /* Assets.xcassets in Resources */,
 				741FA0BC250632C900BAD8F1 /* fill.png in Resources */,
 				741FA0BE250632C900BAD8F1 /* rightage.png in Resources */,
+				74ADC2802507B87100E86FC2 /* beforeknob1.png in Resources */,
+				74ADC27E2507B84700E86FC2 /* fill1.png in Resources */,
 				741FA0BB250632C900BAD8F1 /* knob.png in Resources */,
 				741FA0BA250632C900BAD8F1 /* leftage.png in Resources */,
 				741FA0BD250632C900BAD8F1 /* beforeknob.png in Resources */,

@@ -109,13 +109,13 @@
                                                 </constraints>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Attack" id="sL6-qg-6LD" userLabel="Attack">
                                                     <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Bo-OE-fiw" userLabel="AttackSlider" customClass="MABSlider" customModule="SoundCloon" customModuleProvider="target">
                                                 <rect key="frame" x="106" y="14" width="156" height="19"/>
-                                                <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="57.03125" tickMarkPosition="above" sliderType="linear" id="NBk-Nr-z4a"/>
+                                                <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="14.065393518518517" tickMarkPosition="above" sliderType="linear" id="NBk-Nr-z4a"/>
                                                 <connections>
                                                     <action selector="AttackChanged:" target="XfG-lQ-9wD" id="dHp-qE-w6A"/>
                                                 </connections>
@@ -140,13 +140,13 @@
                                                 </constraints>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Decay" id="cfJ-vM-6O7" userLabel="Attack">
                                                     <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R6R-Mv-9UX" userLabel="AttackSlider">
+                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R6R-Mv-9UX" userLabel="AttackSlider" customClass="MABSlider" customModule="SoundCloon" customModuleProvider="target">
                                                 <rect key="frame" x="106" y="15" width="156" height="19"/>
-                                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="dun-hb-sQz"/>
+                                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="39.892939814814817" tickMarkPosition="above" sliderType="linear" id="dun-hb-sQz"/>
                                                 <connections>
                                                     <action selector="DecayChanged:" target="XfG-lQ-9wD" id="ife-tp-zEy"/>
                                                 </connections>
@@ -171,13 +171,13 @@
                                                 </constraints>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Sustain" id="LDt-SD-Iyd" userLabel="Attack">
                                                     <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VIa-p6-ey1" userLabel="AttackSlider">
+                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VIa-p6-ey1" userLabel="AttackSlider" customClass="MABSlider" customModule="SoundCloon" customModuleProvider="target">
                                                 <rect key="frame" x="106" y="14" width="156" height="19"/>
-                                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="bfz-5d-sYY"/>
+                                                <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="88.240740740740748" tickMarkPosition="above" sliderType="linear" id="bfz-5d-sYY"/>
                                                 <connections>
                                                     <action selector="SustainChanged:" target="XfG-lQ-9wD" id="TPc-2U-xky"/>
                                                 </connections>
@@ -202,13 +202,13 @@
                                                 </constraints>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Release" id="V2A-nQ-qAY" userLabel="Attack">
                                                     <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R4E-Pd-pNN" userLabel="AttackSlider">
+                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R4E-Pd-pNN" userLabel="AttackSlider" customClass="MABSlider" customModule="SoundCloon" customModuleProvider="target">
                                                 <rect key="frame" x="106" y="15" width="156" height="19"/>
-                                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="7qG-fJ-RJy"/>
+                                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="7qG-fJ-RJy" customClass="MABSliderCell" customModule="SoundCloon" customModuleProvider="target"/>
                                                 <connections>
                                                     <action selector="ReleaseChanged:" target="XfG-lQ-9wD" id="LAH-4F-5W6"/>
                                                 </connections>
@@ -255,13 +255,13 @@
                                                 </constraints>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Delay" id="f6m-QK-mBo" userLabel="Attack">
                                                     <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <slider verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-LX-LlJ" userLabel="AttackSlider">
+                                            <slider verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-LX-LlJ" userLabel="AttackSlider" customClass="MABSlider" customModule="SoundCloon" customModuleProvider="target">
                                                 <rect key="frame" x="56" y="-1" width="66" height="19"/>
-                                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="z6Z-KE-uD9"/>
+                                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="z6Z-KE-uD9" customClass="MABSliderCell" customModule="SoundCloon" customModuleProvider="target"/>
                                                 <connections>
                                                     <action selector="DelayChanged:" target="XfG-lQ-9wD" id="bQG-LN-C9t"/>
                                                 </connections>
@@ -286,11 +286,11 @@
                                                 </constraints>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Reverb" id="gkg-T2-6Xe" userLabel="Attack">
                                                     <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <slider verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-od-9i2" userLabel="AttackSlider">
+                                            <slider verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-od-9i2" userLabel="AttackSlider" customClass="MABSlider" customModule="SoundCloon" customModuleProvider="target">
                                                 <rect key="frame" x="56" y="77" width="66" height="19"/>
                                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="oaq-Fu-kSU"/>
                                                 <connections>
@@ -431,11 +431,11 @@
                                                 <rect key="frame" x="-2" y="0.0" width="35" height="16"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Filter" id="9Fj-mJ-AYP">
                                                     <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <slider verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3L3-gp-TOq">
+                                            <slider verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3L3-gp-TOq" customClass="MABSlider" customModule="SoundCloon" customModuleProvider="target">
                                                 <rect key="frame" x="37" y="-1" width="96" height="19"/>
                                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="rCs-kB-uM7"/>
                                                 <connections>
@@ -535,8 +535,14 @@
                     </view>
                     <connections>
                         <outlet property="ADSRGraphView" destination="b4d-5q-FjM" id="2t2-pa-7Yr"/>
+                        <outlet property="AttackSlider" destination="9Bo-OE-fiw" id="ooP-Yz-H8M"/>
                         <outlet property="BpmLabel" destination="P0F-LE-bjd" id="l7v-fj-IVE"/>
-                        <outlet property="MabSlider" destination="9Bo-OE-fiw" id="lJL-jG-pDk"/>
+                        <outlet property="DecaySlider" destination="R6R-Mv-9UX" id="bae-bJ-xIz"/>
+                        <outlet property="DelaySlider" destination="bMf-LX-LlJ" id="8Dv-41-LOb"/>
+                        <outlet property="FilterSlider" destination="3L3-gp-TOq" id="S3O-L0-Mwc"/>
+                        <outlet property="ReleaseSlider" destination="R4E-Pd-pNN" id="jr4-bf-aRD"/>
+                        <outlet property="ReverbSlider" destination="g1k-od-9i2" id="hE1-4P-O1D"/>
+                        <outlet property="SustainSlider" destination="VIa-p6-ey1" id="DOy-qg-PPh"/>
                         <outlet property="WaveView" destination="S3l-da-2jz" id="iI5-jT-fIa"/>
                         <outlet property="oscLabel" destination="GoD-vm-RvU" id="Aan-Hv-Bh7"/>
                     </connections>

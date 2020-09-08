@@ -10,47 +10,27 @@ import Cocoa
 import AudioKit
 import AudioKitUI
 
-class CustomSliderCell: NSSliderCell {
-
-    let bar: NSImage
-
-    required init(coder aDecoder: NSCoder) {
-        self.bar = NSImage(named: "bar")!
-        super.init(coder: aDecoder)
-    }
-
-    override func drawBar(inside aRect: NSRect, flipped: Bool) {
-        var rect = aRect
-        rect.size = NSSize(width: rect.width, height: 3)
-        self.bar.draw(in: rect)
-        super.drawBar(inside: rect, flipped: flipped)
-    }
-
-}
 
 class ViewController: NSViewController {
-    let sequencer = AKAppleSequencer()//2
-    let sequenceLength = AKDuration(beats: 8.0)
-    
-    @IBOutlet var WaveView: NSStackView!
-    @IBOutlet var ADSRGraphView: NSStackView!
     @IBOutlet var oscLabel: NSTextField!
-    @IBOutlet var BpmLabel: NSTextField!
-    @IBOutlet var Filter: NSSlider!
-    @IBOutlet var MabSlider: MABSlider!
-    
     var fmWithADSR:AKMorphingOscillatorBank = AKMorphingOscillatorBank(waveformArray: [
         AKTable(.sine),
         AKTable(.sawtooth),
         AKTable(.triangle),
         AKTable(.square)]);
     
+    @IBOutlet var AttackSlider: MABSlider!
+    @IBOutlet var DecaySlider: MABSlider!
+    @IBOutlet var SustainSlider: MABSlider!
+    @IBOutlet var DelaySlider: MABSlider!
+    @IBOutlet var ReleaseSlider: MABSlider!
+    @IBOutlet var ReverbSlider: MABSlider!
+    @IBOutlet var FilterSlider: MABSlider!
     
     var filter:AKBandPassButterworthFilter = AKBandPassButterworthFilter();
     var delay:AKDelay = AKDelay();
     var reverb:AKReverb = AKReverb();
     var plot: AKOutputWaveformPlot = AKOutputWaveformPlot();
-    
     
     var scaleSelected:String = "Am";
     var chordNotes: Dictionary<String, Array <Int>> = [
@@ -62,6 +42,14 @@ class ViewController: NSViewController {
         "Am": ["Am", "C"],
         "C": ["C", "G"]
     ]
+    
+    let sequencer = AKAppleSequencer()//2
+    let sequenceLength = AKDuration(beats: 8.0)
+    
+    @IBOutlet var WaveView: NSStackView!
+    @IBOutlet var ADSRGraphView: NSStackView!
+    @IBOutlet var BpmLabel: NSTextField!
+    
     
     
     @IBAction func OscChanged(_ sender: NSSlider) {
@@ -239,14 +227,25 @@ class ViewController: NSViewController {
           }
     }
     
+    func styleSlider(slider: MABSlider) {
+        slider.setKnobImage(image: NSImage(named: "knob")!)
+        slider.setBarFillImage(image: NSImage(named: "fill1")!)
+        slider.setBarFillBeforeKnobImage(image: NSImage(named: "beforeknob1")!)
+        slider.setBarLeftAgeImage(image: NSImage(named: "beforeknob1")!)
+        slider.setBarRightAgeImage(image: NSImage(named: "fill1")!)
+    }
+    
     override func viewWillAppear() {
         super.viewWillAppear()
         
-        self.MabSlider.setKnobImage(image: NSImage(named: "knob")!)
-        self.MabSlider.setBarFillImage(image: NSImage(named: "fill")!)
-        self.MabSlider.setBarFillBeforeKnobImage(image: NSImage(named: "beforeknob")!)
-        self.MabSlider.setBarLeftAgeImage(image: NSImage(named: "leftage")!)
-        self.MabSlider.setBarRightAgeImage(image: NSImage(named: "rightage")!)
+        
+        self.styleSlider(slider: self.AttackSlider);
+        self.styleSlider(slider: self.DecaySlider);
+        self.styleSlider(slider: self.SustainSlider);
+        self.styleSlider(slider: self.ReleaseSlider);
+        self.styleSlider(slider: self.DelaySlider);
+        self.styleSlider(slider: self.ReverbSlider);
+        self.styleSlider(slider: self.FilterSlider);
         
         view.window?.styleMask.remove(.resizable)
         view.window?.styleMask.remove(.miniaturizable)
@@ -254,6 +253,8 @@ class ViewController: NSViewController {
         
         view.wantsLayer = true
         view.layer?.backgroundColor = NSColor.hexColor(rgbValue: 0x02394A).cgColor
+        
+        
         var midiNode = self.setupSynth();
         self.setupSequencer(midiNode: midiNode);
     }
