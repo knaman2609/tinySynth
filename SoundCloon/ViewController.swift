@@ -85,9 +85,10 @@ class ViewController: NSViewController {
         fmWithADSR.index = index;
     }
     
-    @IBAction func AttackChanged(_ sender: NSSlider) {
+    @IBAction func AttackChanged(_ sender: MABSlider) {
         self.fmWithADSR.attackDuration = Double(sender.integerValue)/100.00;
     }
+  
     
     @IBAction func DecayChanged(_ sender: NSSlider) {
         self.fmWithADSR.decayDuration = Double(sender.integerValue)/100.00;
@@ -194,7 +195,7 @@ class ViewController: NSViewController {
     func setupSequencer(midiNode: AKMIDINode) {
         let track = sequencer.newTrack()
         sequencer.setLength(sequenceLength)
-//        self.generateSequence() 
+        self.generateSequence()
         
         
         AudioKit.output = self.filter;

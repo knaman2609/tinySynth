@@ -5,17 +5,21 @@ PODS:
   - AudioKit/Core (4.10.1)
   - AudioKit/UI (4.10.1):
     - AudioKit/Core
+  - SYFlatButton (1.4)
 
 DEPENDENCIES:
   - AudioKit (~> 4.0)
+  - SYFlatButton
 
 SPEC REPOS:
   trunk:
     - AudioKit
+    - SYFlatButton
 
 SPEC CHECKSUMS:
   AudioKit: b8e508a0af3dc7d53caf0ca1002b187a662f949e
+  SYFlatButton: 324d51dac27a15e6feb572c17a36f11b1ae5edd5
 
-PODFILE CHECKSUM: e675317a1721d4960d5249dfd4d7d76b177aa59a
+PODFILE CHECKSUM: 0fcfaed837b0d64809806f968e9c090a94b05957
 
 COCOAPODS: 1.9.3

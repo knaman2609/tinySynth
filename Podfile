@@ -7,6 +7,7 @@ target 'SoundCloon' do
 
   # Pods for SoundCloon
 	pod 'AudioKit', '~> 4.0'
+	pod 'SYFlatButton'
 
   target 'SoundCloonTests' do
     inherit! :search_paths

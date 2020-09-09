@@ -199,6 +199,7 @@
 				13B4AFD324C6D14E00A38D35 /* Sources */,
 				13B4AFD424C6D14E00A38D35 /* Frameworks */,
 				13B4AFD524C6D14E00A38D35 /* Resources */,
+				706634BE32AAD6F9337B559A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +237,7 @@
 				13B4AFF024C6D15200A38D35 /* Sources */,
 				13B4AFF124C6D15200A38D35 /* Frameworks */,
 				13B4AFF224C6D15200A38D35 /* Resources */,
+				65D69F4CA5A1601B660E2DCD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -324,6 +326,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		65D69F4CA5A1601B660E2DCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoundCloon-SoundCloonUITests/Pods-SoundCloon-SoundCloonUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoundCloon-SoundCloonUITests/Pods-SoundCloon-SoundCloonUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoundCloon-SoundCloonUITests/Pods-SoundCloon-SoundCloonUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6F291C0C7A10EB84D860F2E3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,6 +363,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		706634BE32AAD6F9337B559A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoundCloon/Pods-SoundCloon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoundCloon/Pods-SoundCloon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoundCloon/Pods-SoundCloon-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A05F5B9A7A47BE365207B532 /* [CP] Check Pods Manifest.lock */ = {

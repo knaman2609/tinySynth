@@ -76,7 +76,7 @@
                                         <rect key="frame" x="-2" y="0.0" width="164" height="76"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="sine" id="KIw-bV-Nay">
                                             <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
@@ -117,7 +117,7 @@
                                                 <rect key="frame" x="106" y="14" width="156" height="19"/>
                                                 <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="14.065393518518517" tickMarkPosition="above" sliderType="linear" id="NBk-Nr-z4a"/>
                                                 <connections>
-                                                    <action selector="AttackChanged:" target="XfG-lQ-9wD" id="dHp-qE-w6A"/>
+                                                    <action selector="AttackChanged:" target="XfG-lQ-9wD" id="fmB-Ug-6XV"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -329,62 +329,119 @@
                             <stackView distribution="fillProportionally" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ezb-sD-xx2" userLabel="ChordView">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="340"/>
                                 <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vlQ-u0-s4f">
-                                        <rect key="frame" x="4" y="276" width="152" height="58"/>
-                                        <buttonCell key="cell" type="push" title="Am" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wuC-zF-upW">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vlQ-u0-s4f" customClass="SYFlatButton">
+                                        <rect key="frame" x="10" y="283" width="140" height="47"/>
+                                        <buttonCell key="cell" type="square" title="Am" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wuC-zF-upW">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="onAnimateDuration">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundNormalColor">
+                                                <color key="value" red="0.84958291050000001" green="0.33953320980000001" blue="0.58825206760000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="AmSelected:" target="XfG-lQ-9wD" id="WvR-Oa-Wmw"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="V5s-AZ-Pki">
-                                        <rect key="frame" x="4" y="222" width="152" height="57"/>
-                                        <buttonCell key="cell" type="push" title="C" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0TC-pa-wjh">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="V5s-AZ-Pki" customClass="SYFlatButton">
+                                        <rect key="frame" x="10" y="229" width="140" height="46"/>
+                                        <buttonCell key="cell" type="square" title="C" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0TC-pa-wjh">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundNormalColor">
+                                                <color key="value" red="0.84958291050000001" green="0.33953320980000001" blue="0.58825206760000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="CSelected:" target="XfG-lQ-9wD" id="Evj-mC-6i8"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="79R-m1-JnH">
-                                        <rect key="frame" x="4" y="167" width="152" height="58"/>
-                                        <buttonCell key="cell" type="push" title="D" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="V1t-AG-r5n">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="79R-m1-JnH" customClass="SYFlatButton">
+                                        <rect key="frame" x="10" y="174" width="140" height="47"/>
+                                        <buttonCell key="cell" type="square" title="D" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="V1t-AG-r5n">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundNormalColor">
+                                                <color key="value" red="0.84958291050000001" green="0.33953320980000001" blue="0.58825206760000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="DSelected:" target="XfG-lQ-9wD" id="kuL-4x-KZG"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lYG-Wn-fGh">
-                                        <rect key="frame" x="4" y="112" width="152" height="58"/>
-                                        <buttonCell key="cell" type="push" title="Em" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qpa-dj-lld">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lYG-Wn-fGh" customClass="SYFlatButton">
+                                        <rect key="frame" x="10" y="119" width="140" height="47"/>
+                                        <buttonCell key="cell" type="square" title="Em" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qpa-dj-lld">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundNormalColor">
+                                                <color key="value" red="0.84958291050000001" green="0.33953320980000001" blue="0.58825206760000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="EmSelected:" target="XfG-lQ-9wD" id="cri-ox-dcI"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BCg-Zu-58b">
-                                        <rect key="frame" x="4" y="58" width="152" height="57"/>
-                                        <buttonCell key="cell" type="push" title="Gm" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xCm-py-t20">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BCg-Zu-58b" customClass="SYFlatButton">
+                                        <rect key="frame" x="10" y="65" width="140" height="46"/>
+                                        <buttonCell key="cell" type="square" title="Gm" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xCm-py-t20">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundNormalColor">
+                                                <color key="value" red="0.84958291050000001" green="0.33953320980000001" blue="0.58825206760000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="GmSelected:" target="XfG-lQ-9wD" id="f1H-Ov-PoK"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iox-h8-hxv">
-                                        <rect key="frame" x="4" y="3" width="152" height="58"/>
-                                        <buttonCell key="cell" type="push" title="B" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8Jf-bd-q1m">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iox-h8-hxv" customClass="SYFlatButton">
+                                        <rect key="frame" x="10" y="10" width="140" height="47"/>
+                                        <buttonCell key="cell" type="square" title="B" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8Jf-bd-q1m">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundNormalColor">
+                                                <color key="value" red="0.84958291050000001" green="0.33953320980000001" blue="0.58825206760000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="BSelected:" target="XfG-lQ-9wD" id="o3Q-ER-20b"/>
                                         </connections>
@@ -486,19 +543,28 @@
                                         <rect key="frame" x="70" y="116" width="20" height="108"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="20" id="ORa-lu-koO">
                                             <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Za-X4-HZg">
-                                        <rect key="frame" x="46" y="-7" width="69" height="119"/>
-                                        <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="O5M-ei-bPR">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Za-X4-HZg" customClass="SYFlatButton">
+                                        <rect key="frame" x="61" y="0.0" width="39" height="108"/>
+                                        <buttonCell key="cell" type="square" title="Stop" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="O5M-ei-bPR">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                             <connections>
                                                 <action selector="stopSynth:" target="XfG-lQ-9wD" id="D2y-ET-HG8"/>
                                             </connections>
                                         </buttonCell>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundNormalColor">
+                                                <color key="value" red="0.84958291050000001" green="0.33953320980000001" blue="0.58825206760000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                                 <constraints>
